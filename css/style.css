@@ -228,27 +228,67 @@ img {
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 650px;
+    min-height: 660px;
+    padding: 48px 24px;
 
-    padding: 40px 24px;
+    display: flex;
+    align-items: flex-start;
 
-    background-position: center;
+    background-image: url("../assets/images/hero-banner.png");
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+  }
+
+  .hero::after {
+    display: none;
   }
 
   .hero-overlay {
+    display: block;
+
+    position: absolute;
+    inset: 0;
+
     background: linear-gradient(
       180deg,
-      rgba(255, 250, 243, 0.95) 0%,
-      rgba(255, 250, 243, 0.9) 100%
+      rgba(255, 250, 243, 0.96) 0%,
+      rgba(255, 250, 243, 0.88) 42%,
+      rgba(255, 250, 243, 0.42) 72%,
+      rgba(255, 250, 243, 0.12) 100%
     );
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+
+    position: relative;
+    z-index: 2;
+
+    padding: 0;
+    background: transparent;
   }
 
   .hero h1 {
     font-size: 42px;
+    line-height: 1.08;
   }
 
   .hero p {
     font-size: 15px;
+    line-height: 1.8;
+    max-width: 330px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    max-width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
   }
 }
 
@@ -828,65 +868,6 @@ img {
   .menu-mobile {
     display: block;
   }
-
-  @media (max-width: 768px) {
-  .hero {
-    min-height: auto;
-
-    padding: 0;
-
-    display: flex;
-    flex-direction: column;
-
-    background-image: none;
-  }
-
-  .hero::after {
-    content: "";
-
-    width: 100%;
-    height: 360px;
-
-    display: block;
-
-    background-image: url("../assets/images/hero-banner.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .hero-overlay {
-    display: none;
-  }
-
-  .hero-content {
-    width: 100%;
-    max-width: 100%;
-
-    padding: 46px 24px 34px;
-
-    background: #fffaf3;
-  }
-
-  .hero h1 {
-    font-size: 42px;
-    line-height: 1.08;
-  }
-
-  .hero p {
-    font-size: 15px;
-    line-height: 1.8;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .hero-buttons .btn {
-    width: 100%;
-  }
-}
 
   .qr-card {
     display: none;
