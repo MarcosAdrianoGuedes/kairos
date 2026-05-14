@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="./css/style.css" />
 </head>
@@ -17,6 +17,8 @@
 <body>
 
   <header class="header">
+    <button class="menu-mobile" id="menuMobile">☰</button>
+
     <a href="./index.html" class="logo">
       <span>TERÇOS</span>
       <strong>Kairós</strong>
@@ -35,38 +37,137 @@
       <button>🛒</button>
     </div>
 
-    <button class="menu-mobile" id="menuMobile">☰</button>
+    <button class="cart-mobile">🛒</button>
   </header>
 
   <main>
 
-    <section class="hero">
-      <div class="hero-overlay"></div>
+    <section class="mobile-store-top">
+      <div class="search-box">
+        <input type="text" placeholder="O que você está procurando?" />
+        <button>⌕</button>
+      </div>
 
-      <div class="hero-content">
-        <h1>
-          Dia de Nossa Senhora de Fátima
-          <span>um propósito.</span>
-        </h1>
+      <p class="store-message">
+        Terços personalizados com fé, delicadeza e propósito ✨
+      </p>
 
-        <div class="decor-line"></div>
+      <div class="category-scroll">
+        <a href="./tercos.html" class="category-item">
+          <img src="./assets/images/terco-sao-bento.jpg" alt="Terços personalizados" />
+          <span>Terços</span>
+        </a>
 
-        <p>
-          Cada terço carrega uma história,
-          uma oração e um propósito.
-          Evangelizando através das mãos
-          e da oração.
-        </p>
+        <a href="./historias.html" class="category-item">
+          <img src="./assets/images/santos.jpg" alt="Santos" />
+          <span>Santos</span>
+        </a>
 
-        <div class="hero-buttons">
-          <a href="./tercos.html" class="btn btn-primary">
-            CONHEÇA OS TERÇOS
-          </a>
+        <a href="./contato.html" class="category-item">
+          <img src="./assets/images/oracao.jpg" alt="Pedidos de oração" />
+          <span>Orações</span>
+        </a>
+      </div>
+    </section>
 
-          <a href="./historias.html" class="btn btn-outline">
-            HISTÓRIA DOS SANTOS
-          </a>
-        </div>
+    <section class="hero-carousel">
+      <div class="carousel-track" id="carouselTrack">
+
+        <article class="carousel-slide">
+          <img src="./assets/images/hero-banner.png" alt="Terços personalizados" />
+
+          <div class="hero-content">
+            <h1>
+              Dia de Nossa Senhora de Fátima
+              <span>um propósito.</span>
+            </h1>
+
+            <div class="decor-line"></div>
+
+            <p>
+              Cada terço carrega uma história,
+              uma oração e um propósito.
+              Evangelizando através das mãos
+              e da oração.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="./tercos.html" class="btn btn-primary">
+                CONHEÇA OS TERÇOS
+              </a>
+
+              <a href="./historias.html" class="btn btn-outline">
+                HISTÓRIA DOS SANTOS
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="carousel-slide">
+          <img src="./assets/images/history-banner.png" alt="Cada terço conta uma história" />
+
+          <div class="hero-content">
+            <h1>
+              Cada terço conta
+              <span>uma história.</span>
+            </h1>
+
+            <div class="decor-line"></div>
+
+            <p>
+              Conheça a história do santo de devoção, suas virtudes,
+              milagres e uma oração especial.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="./historias.html" class="btn btn-primary">
+                CONHECER HISTÓRIAS
+              </a>
+
+              <a href="./tercos.html" class="btn btn-outline">
+                VER TERÇOS
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="carousel-slide">
+          <img src="./assets/images/nossa-historia.jpg" alt="Nossa história" />
+
+          <div class="hero-content">
+            <h1>
+              Feitos à mão
+              <span>com amor e fé.</span>
+            </h1>
+
+            <div class="decor-line"></div>
+
+            <p>
+              Peças delicadas, personalizadas e criadas com carinho
+              para momentos especiais.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="./contato.html" class="btn btn-primary">
+                FAZER ENCOMENDA
+              </a>
+
+              <a href="./historias.html" class="btn btn-outline">
+                CONHEÇA MAIS
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <button class="carousel-arrow prev" id="prevSlide">‹</button>
+      <button class="carousel-arrow next" id="nextSlide">›</button>
+
+      <div class="carousel-dots" id="carouselDots">
+        <button class="active"></button>
+        <button></button>
+        <button></button>
       </div>
     </section>
 
@@ -192,7 +293,7 @@
         <div>
           <h3>Nossa História</h3>
           <p>Conheça o propósito que Deus colocou nas nossas mãos.</p>
-          <a href="./sobre.html">CONHECER</a>
+          <a href="./contato.html">CONHECER</a>
         </div>
         <img src="./assets/images/nossa-historia.jpg" alt="Nossa História" />
       </article>
@@ -254,7 +355,6 @@
           <li><a href="./index.html">Início</a></li>
           <li><a href="./tercos.html">Loja</a></li>
           <li><a href="./historias.html">Santos</a></li>
-          <li><a href="./sobre.html">Nossa História</a></li>
           <li><a href="#">Pedidos de Oração</a></li>
           <li><a href="./contato.html">Contato</a></li>
         </ul>
